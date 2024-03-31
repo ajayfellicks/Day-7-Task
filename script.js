@@ -63,6 +63,6 @@ request.send();
 request.onload = function () {
   var data = request.response;
   var result = JSON.parse(data);
-  var res = result.map((ele) => ele.currencies)
+  var res = result.map((ele) => ele.currencies);
 };
 */
