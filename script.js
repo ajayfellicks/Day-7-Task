@@ -62,6 +62,6 @@ request4.send();
 request4.onload = function () {
   var data = request4.response;
   var result = JSON.parse(data);
-  var res = result.filter((ele) => ele.currencies === "USA");
-  console.log(res);
+  var curr = result.filter((ele) => ele.currencies && ele.currencies.USD);
+  curr.forEach((value) => console.log(value.name.common));
 };
